@@ -1,5 +1,7 @@
-.github
-.storybook
-.componly
-public
-node_modules
+
+              .github
+              .storybook
+              .componly
+              public
+              node_modules
+              

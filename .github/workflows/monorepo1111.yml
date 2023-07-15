@@ -32,11 +32,11 @@ jobs:
           if [[ "${{ matrix.workspaces}}" != "empty" ]]; then
               pwd
               pushd ${{ matrix.workspaces }}
-              yarn install && yarn add @componly/cli -D && yarn add axios -D
+              yarn install && yarn add @componly/core  @componly/schemas  @componly/cli axios -D 
               popd
           else
               echo "No workspaces to install. Running 'yarn install' in the root directory."
-              yarn install && yarn add @componly/cli -D && yarn add axios -D
+              yarn install && yarn add @componly/core  @componly/schemas  @componly/cli axios -D 
           fi
 
       - name: Pre scan.json
@@ -51,7 +51,7 @@ jobs:
             const axios = require("axios");
 
             const instance = axios.create({
-              baseURL: "'https://26c5-105-235-136-9.ngrok-free.app",
+              baseURL: "https://26c5-105-235-136-9.ngrok-free.app",
               headers: {
                 "Content-Type": "application/json",
               },
@@ -97,7 +97,7 @@ jobs:
             const axios = require("axios");
 
             const instance = axios.create({
-              baseURL: "'https://26c5-105-235-136-9.ngrok-free.app",
+              baseURL: "https://26c5-105-235-136-9.ngrok-free.app",
               headers: {
                 "Content-Type": "application/json",
               },
